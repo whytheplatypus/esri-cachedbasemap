@@ -1,6 +1,6 @@
-(function(EsriLeaflet) {
+(function(L.esri) {
 
-  EsriLeaflet.Layers.CachedBasemapLayer = L.esri.BasemapLayer.extend({
+  L.esri.Layers.CachedBasemapLayer = L.esri.BasemapLayer.extend({
         _setUpTile: function(tile, value) {
             tile._layer = this;
             tile.onload = this._tileOnLoad;
@@ -133,14 +133,14 @@
         }
     });
 
-    EsriLeaflet.CachedBasemapLayer = EsriLeaflet.Layers.CachedBasemapLayer;
+    L.esri.CachedBasemapLayer = L.esri.Layers.CachedBasemapLayer;
 
-    EsriLeaflet.Layers.cachedBasemapLayer = function(key, options) {
-        return new EsriLeaflet.Layers.CachedBasemapLayer(key, options);
+    L.esri.Layers.cachedBasemapLayer = function(key, options) {
+        return new L.esri.Layers.CachedBasemapLayer(key, options);
     };
 
-    EsriLeaflet.cachedBasemapLayer = function(key, options) {
-        return new EsriLeaflet.Layers.CachedBasemapLayer(key, options);
+    L.esri.cachedBasemapLayer = function(key, options) {
+        return new L.esri.Layers.CachedBasemapLayer(key, options);
     };
 
-})(EsriLeaflet);
+})(L.esri);
